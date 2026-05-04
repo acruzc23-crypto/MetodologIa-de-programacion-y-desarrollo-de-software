@@ -1,0 +1,22 @@
+Factorial de un Número.
+
+El objetivo era crear un programa con HTML, CSS y JavaScript para
+calcular el factorial de un número. La lógica principal utiliza un
+ciclo for que itera desde el 1 hasta el valor ingresado, realizando
+la multiplicación y concatenando el procedimiento paso a paso, como
+por ejemplo 1 * 2 * 3 * 4 * 5, junto con el resultado final.
+
+Para la interfaz, además del botón de cálculo, implementé un botón
+de limpieza que resetea los valores en pantalla sin necesidad de
+recargar la página. Los datos se muestran estructurados dentro de
+un contenedor específico para mayor claridad visual.
+
+Este ejercicio fue más complejo y me tomó unos 3 días. Enfrenté
+varios bugs, como errores de ejecución que dejaban la pantalla en
+blanco y fallos en la lógica del ciclo. Para resolverlo, busqué 
+ayuda externa en internet y me apoyé bastante en las extensiones
+de Visual Studio Code para poder depurar el código.
+
+Al final, la práctica me sirvió muchísimo para afianzar el uso de
+estructuras repetitivas aplicadas a algoritmos matemáticos y para
+mejorar la manipulación de la interfaz gráfica.
