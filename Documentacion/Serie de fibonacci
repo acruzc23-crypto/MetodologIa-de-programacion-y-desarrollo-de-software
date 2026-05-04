@@ -1,0 +1,19 @@
+Serie de Fibonacci.
+
+Para este trabajo, el reto era implementar la serie de Fibonacci, donde
+cada número es la suma de los dos anteriores. Lo primero fue entender
+bien la lógica matemática antes de pasar a la codificación.
+
+Armé una interfaz básica (HTML) con un input para definir la cantidad
+de números a mostrar y un botón de ejecución. La lógica principal la
+resolví con un ciclo for, usando variables temporales para ir guardando
+y sumando los valores anteriores en cada iteración.
+
+Durante las pruebas tuve varios errores lógicos porque la secuencia se
+desfasaba o no sumaba bien. Me apoyé mucho en tutoriales de YouTube
+para terminar de entender el algoritmo y adaptarlo a mi código.
+
+En total me tomó unos 3 días. Como sigo en proceso de aprendizaje con
+el desarrollo y la estructura HTML, sé que el código fuente puede tener
+áreas de mejora, pero logré que la lógica funcionara correctamente y
+sigo practicando para optimizar mis proyectos.
