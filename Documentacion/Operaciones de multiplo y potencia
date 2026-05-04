@@ -1,0 +1,25 @@
+ Operaciones de multiplo y potencia
+
+El desarrollo de este proyecto tomó alrededor de 3 días. Para la
+interfaz, reutilicé la base CSS del primer ejercicio para mantener 
+la coherencia visual. La estructura HTML utiliza contenedores div 
+para organizar los inputs (donde se ingresan los valores A y B) y 
+dos botones: uno para ejecutar las operaciones y otro para limpiar 
+los campos.
+
+La lógica principal se maneja en JavaScript mediante funciones.
+Utilicé variables let para almacenar las entradas y armar cadenas
+de texto que muestren el procedimiento paso a paso. El núcleo 
+matemático emplea ciclos for para iterar las veces que sean 
+necesarias y resolver los cálculos de multiplicación y potencia.
+
+Dentro de estos ciclos, implementé condicionales if para dar
+formato al proceso (por ejemplo, para controlar cuándo concatenar 
+un signo de multiplicar y cuándo el resultado final). Como prueba, 
+si se ingresa base 2 y exponente 2, el bucle procesa la operación 
+mostrando en pantalla el texto exacto: "2 * 2 = 4".
+
+Finalmente, interactué con el DOM usando el objeto document para
+inyectar este resultado en la etiqueta de salida. Además, la 
+función de limpieza se encarga de resetear eficientemente las 
+variables y limpiar la pantalla para realizar un nuevo cálculo.
