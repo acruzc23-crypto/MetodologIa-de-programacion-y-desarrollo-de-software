@@ -1,0 +1,27 @@
+Números Primos de la Serie Fibonacci.
+
+Para este ejercicio, me enfoqué en armar una aplicación más robusta
+integrando HTML5, CSS3 y JavaScript. El objetivo era generar la 
+secuencia de Fibonacci, identificar cuáles de esos números son primos,
+y adicionalmente calcular su suma y promedio.
+
+En la estructura HTML utilicé etiquetas semánticas y un input de
+tipo numérico. Algo fundamental en esta fase fue asignar IDs a los
+elementos clave, ya que esto es crucial para que JavaScript pueda
+encontrarlos de forma directa, leer sus valores y modificar el DOM.
+
+En cuanto al diseño visual, apliqué CSS moderno. Usé Flexbox para
+centrar los elementos, añadí sombras (box-shadow) para darle
+un efecto 3D a la interfaz, bordes de colores para separar la 
+información, y la propiedad overflow-y para que la caja de 
+resultados tenga una barra de desplazamiento (scroll).
+
+Toda la lógica la manejé con JavaScript dividiéndola en funciones:
+- esPrimo(numero): Un algoritmo básico de primalidad.
+- calcular(): Captura el input con parseInt(), genera la secuencia
+  en un arreglo dinámico usando la fórmula fib[i] = fib[i-1] + fib[i-2],
+  filtra los primos, y calcula las estadísticas finales.
+
+Finalmente, mediante el evento onclick del botón, la función procesa
+todo y actualiza la pantalla inyectando el código con .innerHTML,
+asegurándome de redondear los decimales del promedio usando toFixed(2).
