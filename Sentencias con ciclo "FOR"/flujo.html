@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Factorial de un Número</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .contenedor {
+            border: 2px solid black;
+            padding: 20px;
+            display: inline-block;
+        }
+
+        #resultado {
+            margin-top: 15px;
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            padding: 10px;
+            overflow-y: auto;
+            text-align: left;
+            white-space: pre-line;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <h2>Factorial de un Número</h2>
+
+        <label>Ingrese un número (N):</label><br><br>
+        <input type="number" id="numero"><br><br>
+
+        <button id="btnCalcular">Calcular</button>
+        <button id="btnLimpiar">Limpiar</button>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        //Alavera Mejía Wellington Zinedine.
+        window.onload = function () {
+
+            document.getElementById("btnCalcular").addEventListener("click", function () {
+
+                let n = document.getElementById("numero").value;
+                let resultadoDiv = document.getElementById("resultado");
+
+                if (n === "" || n < 0) {
+                    alert("Ingrese un número válido");
+                    return;
+                }
+
+                let factorial = 1;
+                let proceso = "";
+
+                for (let i = 1; i <= n; i++) {
+                    factorial *= i;
+                    proceso += i;
+                    if (i < n) {
+                        proceso += " * ";
+                    }
+                }
+
+                resultadoDiv.innerHTML =
+                    "Proceso:<br>" + proceso +
+                    "<br><br>Resultado:<br>" + n + "! = " + factorial;
+            });
+
+            document.getElementById("btnLimpiar").addEventListener("click", function () {
+                document.getElementById("numero").value = "";
+                document.getElementById("resultado").innerHTML = "";
+            });
+
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Primos</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .contenedor {
+            text-align: center;
+        }
+        
+        .resultados {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            font-family: monospace;
+            border: 2px solid #333;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            width: 400px;
+            height: 400px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        
+        .resultados h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        
+        .resultados p {
+            margin: 8px 0;
+            padding: 5px;
+            border-left: 3px solid #3498db;
+            padding-left: 10px;
+        }
+        
+        .resultados p:last-child {
+            margin-bottom: 0;
+        }
+        
+        button {
+            margin-top: 10px;
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+        
+        input {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Números primos en Fibonacci</h1>
+        
+        <label>¿Cuántos números de Fibonacci? </label>
+        <input type="number" id="n" value="10">
+        <button onclick="calcular()">Calcular</button>
+
+        <div id="resultados" class="resultados">
+            <h3>=== RESULTADOS ===</h3>
+            <p>Esperando cálculo...</p>
+        </div>
+    </div>
+
+    <script>
+        //Ocampo Rivera Christopher Alexis.
+        function esPrimo(numero) {
+            if(numero < 2) return false;
+            for(let i = 2; i < numero; i++) {
+                if(numero % i === 0) return false;
+            }
+            return true;
+        }
+
+        function calcular() {
+            let N = parseInt(document.getElementById('n').value);
+            
+            // Generar los Fibonacci  
+            let fib = [];
+            fib[0] = 1;
+            if(N > 1) 
+            fib[1] = 1;
+            
+            for(let i = 2; i < N; i++) {
+                fib[i] = fib[i-1] + fib[i-2];
+            }
+            
+            // Buscar los primos
+            let primos = [];
+            let indicePrimo = 0;
+            for(let i = 0; i < fib.length; i++) {
+                if(esPrimo(fib[i])) {
+                    primos[indicePrimo] = fib[i];
+                    indicePrimo++;
+                }
+            }
+            
+            // Calcular suma y promedio
+            let suma = 0;
+            for(let i = 0; i < primos.length; i++) {
+                suma += primos[i];
+            }
+            let promedio = primos.length > 0 ? suma / primos.length : 0;
+            
+            // Mostrar en la página
+            let resultadosDiv = document.getElementById('resultados');
+            resultadosDiv.innerHTML = `
+                <h3>=== RESULTADOS ===</h3>
+                <p><strong>📊 Serie Fibonacci:</strong> ${fib.join(', ')}</p>
+                <p><strong>🔢 Números primos:</strong> ${primos.join(', ') || 'Ninguno'}</p>
+                <p><strong>➕ Suma:</strong> ${suma}</p>
+                <p><strong>📈 Promedio:</strong> ${promedio.toFixed(2)}</p>
+                <p style="border-left-color: #e74c3c;">✅ Cálculo completado</p>
+            `;
+            
+            // También los muestra en consola
+            console.log("=== RESULTADOS ===");
+            console.log("Serie Fibonacci:", fib.join(', '));
+            console.log("Números primos:", primos.join(', '));
+            console.log("Suma:", suma);
+            console.log("Promedio:", promedio);
+        }
+    </script>
+</body>
+</html>

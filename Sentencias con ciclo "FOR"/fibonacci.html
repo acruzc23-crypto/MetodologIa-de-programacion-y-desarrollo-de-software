@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Serie de Fibonacci</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .contenedor {
+            border: 2px solid black;
+            padding: 20px;
+            display: inline-block;
+        }
+
+        #resultado {
+            margin-top: 15px;
+            width: 250px;
+            height: 200px;
+            border: 2px solid black;
+            padding: 10px;
+            overflow-y: auto;
+            text-align: left;
+            white-space: pre-line;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <h2>Serie de Fibonacci</h2>
+
+        <label>Ingrese cantidad de términos (N):</label><br><br>
+        <input type="number" id="numero"><br><br>
+
+        <button id="btnGenerar">Generar</button>
+        <button id="btnLimpiar">Limpiar</button>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        //Alavera Mejía Wellington Zinedine.
+        window.onload = function () {
+
+            document.getElementById("btnGenerar").addEventListener("click", function () {
+
+                let n = document.getElementById("numero").value;
+                let resultado = document.getElementById("resultado");
+
+                if (n === "" || n <= 0) {
+                    alert("Ingrese un número válido");
+                    return;
+                }
+
+                let a = 1;
+                let b = 1;
+
+                resultado.innerHTML = "Serie de Fibonacci:<br>----------------<br>";
+
+                for (let i = 1; i <= n; i++) {
+                    resultado.innerHTML += a + "<br>";
+
+                    let siguiente = a + b;
+                    a = b;
+                    b = siguiente;
+                }
+            });
+
+            document.getElementById("btnLimpiar").addEventListener("click", function () {
+                document.getElementById("numero").value = "";
+                document.getElementById("resultado").innerHTML = "";
+            });
+
+        };
+    </script>
+
+</body>
+</html>

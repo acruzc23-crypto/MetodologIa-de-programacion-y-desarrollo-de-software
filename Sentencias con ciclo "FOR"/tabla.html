@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla de Multiplicar</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .contenedor {
+            border: 2px solid black;
+            padding: 20px;
+            display: inline-block;
+        }
+
+        #resultado {
+            margin-top: 15px;
+            width: 250px;
+            height: 200px;
+            border: 2px solid black;
+            padding: 10px;
+            overflow-y: auto;
+            text-align: left;
+            white-space: pre-line;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <h2>Tabla de Multiplicar</h2>
+
+        <label>Ingrese un número:</label><br><br>
+        <input type="number" id="numero"><br><br>
+
+        <button onclick="generarTabla()">Generar tabla</button>
+        <button onclick="limpiar()">Limpiar</button>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        //Cruz Chalen Alfredo Josua. 
+        function generarTabla() {
+            let numero = parseInt(document.getElementById('numero').value);
+            let resultado = document.getElementById('resultado');
+            resultado.innerHTML = '';
+            if (isNaN(numero)) {
+                resultado.innerHTML = 'Por favor, ingrese un número válido.';
+                return;
+            }
+            for (let i = 1; i <= 10; i++) {
+                resultado.innerHTML += numero + ' x ' + i + ' = ' + (numero * i) + '\n';
+            }
+        }
+
+        function limpiar() {
+            document.getElementById('numero').value = '';
+            document.getElementById('resultado').innerHTML = '';
+        }
+    </script>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Serie Fibonacci</title>
+</head>
+<body>
+  <h2>Serie Fibonacci y números primos</h2>
+
+  <form id="formFibo">
+    <label>Ingrese N: </label>
+    <input type="number" id="cantidad" min="1" required>
+    <button type="submit">Calcular</button>
+
+  </form>
+
+  <p id="listaFibo"></p>
+  <p id="listaPrimos"></p>
+  <p id="conteoPrimos"></p>
+
+  <script>
+    //Gualpa Gonzalez Jhon Jairo.
+
+    function esPrimo(num) {
+      if (num < 2) return false;
+      for (var i = 2; i < num; i++) {
+        if (num % i === 0) return false;
+      }
+      return true;
+    }
+
+    document.getElementById("formFibo").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var N = parseInt(document.getElementById("cantidad").value);
+      var fibo = [];
+      var a = 0, b = 1;
+      for (var i = 0; i < N; i++) {
+        fibo.push(b);
+        var temp = a + b;
+        a = b;
+        b = temp;
+      }
+
+      document.getElementById("listaFibo").textContent = "Los " + N + " primeros Fibonacci son: " + fibo;
+      var primos = [];
+      for (var j = 0; j < fibo.length; j++) {
+        if (esPrimo(fibo[j])) {
+          primos.push(fibo[j]);
+        }
+        
+      }
+
+      document.getElementById("listaPrimos").textContent = "Números primos encontrados: " + primos;
+      document.getElementById("conteoPrimos").textContent = "Cantidad de primos: " + primos.length;
+    });
+  </script>
+</body>
+</html>
