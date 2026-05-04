@@ -1,0 +1,22 @@
+Números Primos.
+
+Para mantener el proyecto ordenado y aplicar buenas prácticas, decidí
+separar la estructura de la página y la lógica programando el archivo
+JavaScript como un módulo (type="module").
+
+En el HTML5, utilicé un contenedor centrado y maqueté la interfaz
+ayudándome de una tabla para alinear correctamente los elementos. El
+formulario cuenta con un input numérico para recibir el límite, un
+botón de generación y un input deshabilitado (solo lectura) para la
+respuesta inicial. Además, creé un contenedor oculto (display: none)
+con etiquetas <p> vacías, listas para mostrar el detalle de los datos.
+
+Dentro del archivo JavaScript (.js), inicié capturando los elementos
+del DOM usando constantes por medio de sus IDs y le asigné un evento
+de clic al botón principal. 
+
+La parte matemática la dividí en dos funciones principales. Ambas
+hacen uso intensivo de ciclos for y condicionales if para recorrer
+los números, verificar si los residuos confirman que son primos,
+contarlos y, finalmente, actualizar la propiedad display del div 
+oculto para inyectar los textos con los resultados en la pantalla.
