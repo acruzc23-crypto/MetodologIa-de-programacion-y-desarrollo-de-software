@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    <title>Ingreso de datos de un sueldo</title>
+</head>
+<body>
+    
+<div style="text-align:center;">
+    <table border="1" style="margin: 0 auto;">
+        <thead>
+            <tr>
+                <th colspan="2">Cálculo de Sueldo Vendedor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nombre del vendedor: </td>
+                <td><input type="text" id="txt-nombre"></td>
+            </tr>
+            <tr>
+                <td>Sueldo básico: </td>
+                <td><input type="number" id="txt-sueldo"></td>
+            </tr>
+            <tr>
+                <td>Venta1: </td>
+                <td><input type="number" id="txt-venta1"></td>
+            </tr>
+            <tr>
+                <td>Venta2: </td>
+                <td><input type="number" id="txt-venta2"></td>
+            </tr>
+            <tr>
+                <td>Venta3: </td>
+                <td><input type="number" id="txt-venta3"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="btn_calcular">Calcular</button>
+                </td>
+                <td>
+                    <input type="text" id="txt-respuesta" disabled placeholder="Respuesta">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <div id="div-resultado" style="display:none;">
+        <p id="txt-vendedor"></p>
+        <p id="txt-total-ventas"></p>
+        <p id="txt-comision"></p>
+        <p id="txt-sueldo-total"></p>
+    </div>
+
+    <script type="module" src="./sueldo.js"></script>
+</div>
+
+</body>
+</html>
