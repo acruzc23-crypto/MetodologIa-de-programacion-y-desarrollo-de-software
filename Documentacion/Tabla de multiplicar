@@ -1,0 +1,19 @@
+1. Tabla de Multiplicar.
+
+El objetivo principal era crear un programa que mostrara la tabla de
+multiplicar de un número ingresado por el usuario. Para resolverlo, la
+solución más eficiente fue implementar un ciclo for del 1 al 10, ya que
+conocía exactamente el límite de iteraciones necesarias.
+
+Para la vista, desarrollé una interfaz gráfica sencilla con un campo de
+texto y un botón. La lógica funciona así: al hacer clic, el programa
+captura el dato, ejecuta el ciclo iterativo y genera los cálculos al 
+instante.
+
+Durante la fase de pruebas me topé con algunos bugs visuales, por lo
+que tuve que depurar el código paso a paso hasta que la salida en
+pantalla quedara completamente limpia, ordenada y fácil de leer.
+
+Me apoyé en Google para revisar la sintaxis específica del ciclo y
+cómo renderizar los resultados en la interfaz. En total, entre la 
+lógica, codificación y corrección de errores, me tomó unos 2 días.
