@@ -1,0 +1,24 @@
+Números Perfectos
+
+El desarrollo de este último ejercicio me tomó alrededor de 4 días.
+Comencé estructurando el documento en HTML5 e integré los estilos
+directamente en el <head> usando la etiqueta <style>. Con esto,
+personalicé los colores, la tipografía y el diseño general de la 
+interfaz. En el <body> dejé preparada la estructura de la tabla.
+
+Toda la lógica la desarrollé en un <script>. Primero, capturé el 
+elemento de la tabla y declaré un contador. El núcleo del algoritmo
+se basa en dos bucles anidados. El ciclo for externo se encarga de
+iterar los valores a evaluar desde el 2 hasta un límite establecido
+de 8128, reseteando un acumulador de suma a 0 en cada pasada.
+
+El ciclo for interno busca los divisores propios del número actual,
+iterando desde 1 hasta la mitad de dicho número (num / 2). Al 
+terminar esta búsqueda, utilizo un condicional if con el operador de
+igualdad estricta (sum === num) para verificar si la suma de los 
+divisores es exactamente igual al número evaluado.
+
+Si la condición se cumple, significa que encontramos un número 
+perfecto. Finalmente, el código crea dinámicamente una nueva fila y 
+la inserta en el DOM, renderizando los resultados ordenadamente en 
+la tabla del HTML.
