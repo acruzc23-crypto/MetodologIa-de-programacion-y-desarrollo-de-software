@@ -1,0 +1,18 @@
+Potencia
+
+El desarrollo de este ejercicio tomó alrededor de 1 día. El objetivo
+era crear una aplicación estructurada en HTML y JavaScript donde el
+usuario ingresa una base (A) y un exponente (B) a través de un 
+formulario, y el cálculo se renderiza en una etiqueta <p>.
+
+La lógica del algoritmo inicializa una variable de resultado en 1 y 
+evalúa tres escenarios. Si B = 0, el resultado se mantiene en 1. Si 
+B > 0, se ejecuta un ciclo for que multiplica la base por sí misma 
+las veces que indique el exponente. Finalmente, si B < 0, se pasa el
+exponente a positivo para realizar el ciclo for y luego se calcula 
+el inverso fraccionario (1 / resultado).
+
+Durante las pruebas, validé el flujo con un caso negativo. Por ejemplo,
+con Base 3 y Exponente -2, el algoritmo calcula primero 3 * 3 = 9 y 
+luego su inverso (1 / 9), imprimiendo correctamente "0.111..." en la 
+pantalla mediante la propiedad textContent.
