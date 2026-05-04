@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    <title>Valores primos</title>
+</head>
+<body>
+    
+<div style="text-align:center;">
+    <table border="1" style="margin: 0 auto;"> 
+        <thead>
+            <tr>
+                <th colspan="5"> Contador de numero Primos </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> Ingrese un Numero </td>
+                <td>
+                    <input type="number"id="txt-numero"> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="btn_generar"> Generar </button>
+                </td>
+                <td>
+                    <input type="text"id="txt-respuesta"disabled placeholder="Respuesta">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    
+    <div id="div-resultado"style="display: none;">
+        <p id="txt-primos"></p>
+        <p id="txt-rango1"></p>
+        <p id="txt-rango2"></p>
+    </div>
+</div>
+
+    <script type="module" src="./Contador.js"></script>
+
+
+</body>
+</html>
