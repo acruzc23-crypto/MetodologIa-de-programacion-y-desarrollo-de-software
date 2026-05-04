@@ -1,0 +1,24 @@
+Ingreso de Datos.
+
+Para este programa, utilicé HTML5 maquetando la interfaz principal
+con una tabla para alinear ordenadamente el formulario. En este 
+espacio, el usuario registra su nombre, sueldo básico y el valor de 
+tres ventas usando inputs específicos (de texto y numéricos) con sus
+respectivos IDs.
+
+Para la salida de datos, preparé un contenedor oculto mediante CSS
+(display: none) que agrupa varias etiquetas <p> destinadas a
+mostrar el desglose final: nombre, total de ventas, comisión
+ganada y el sueldo neto a recibir. Todo este comportamiento lo 
+conecté a un script modular.
+
+En el archivo JavaScript, capturé los elementos del DOM a través de 
+constantes y le asigné un evento de clic al botón principal. Al 
+ejecutarse, la lógica extrae los valores de los inputs, suma las 
+tres ventas, calcula la comisión según el porcentaje establecido y 
+suma este resultado al sueldo básico inicial.
+
+Para terminar, el algoritmo inyecta matemáticamente estos valores 
+calculados en las etiquetas preparadas y cambia el estado display 
+del contenedor para hacerlo visible, entregando un reporte completo 
+y ordenado en pantalla.
