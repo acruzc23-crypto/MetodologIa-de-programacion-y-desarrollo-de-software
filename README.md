@@ -33,4 +33,4 @@ repetitivas usando los bucles Para "FOR".
 
 
 ## Autores: 
-1. Cruz Chalen Alfredo Josu
+1. Cruz Chalen Alfredo Josua
